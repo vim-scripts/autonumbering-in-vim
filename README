@@ -1,0 +1,35 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=580
+
+"Description: This script auto-numbers a list.
+"
+"General recommended settings for editing "*.txt" files
+"set nocp et ts=4 sw=4 tw=80 ai
+"
+"HOW TO INSTALL (requires vim 7.0):
+" - Drop the plugin under $HOME/.vim/plugin or
+" - :source autonum.vim
+"
+"HOW TO USE:
+" 1. Edit a file and type \as to activate autonumbering
+" 2. Insert a number in the below-explained manner (1. )
+" 3. Hit enter (A number is automatically inserted for you)
+" 4. Hit ctrl-t, line is indented and numbered
+" 5. If there are several levels of numbers, ctrl-d and ctrl-t could
+"    be used to insert the next number in sequence at the indent level
+"    your cursor is in.
+" 6. Hit ctrl-g to remove the inserted number
+" 7. Hit ctrl-l to forcefully autonumber
+"
+"Number format expected: "\<\(\d\+\|\a\)\>\W "
+" In words: <word-boundary><(numerals or alphabets)><non-word-char><space>
+" eg: "1. ",     "32) ",         "a] ",     "D> "
+"
+" keymappings: ENTER, ctrl-d, ctrl-t, ctlr-l & ctrl-g all in insert mode
+"  \as   : To start AutoNumbering
+"  \as   : To stop AutoNumbering (yeah, it toggles :)
+"  ENTER : start with next number (add 1 to previous)
+"  ctrl-d: indent one level back and try to autonumber
+"  ctrl-t: indent one level forward and try to autonumber
+"  ctrl-l: autonumber.
+"  ctrl-g: remove numbering on the line
+
